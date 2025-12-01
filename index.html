@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小RPG遊戲</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+
+<body class="game2">
+    <script src="assets/js/script.js" defer></script>
+    <div class="cent">
+        <div class="  mt-5  p-3">
+            <div class="d-flex flex-column gap-2 ">
+                <button class="btn btn-outline-secondary" id="btnStart" disabled>Start</button>
+                <button class="btn btn-outline-secondary" id="btnPause" disabled>Pause</button>
+                <button class="btn btn-outline-danger" id="cleardataBtn">刪除資料</button>
+                <button class="btn btn-outline-secondary" id="btnSpeedUp">Speed +</button>
+                <button class="btn btn-outline-secondary" id="btnSpeedDown">Speed -</button>
+            </div>
+        </div>
+
+        <div class="card col-12 col-md-9 col-lg-9 m-5 rounded shadow ">
+            <div class="card-body custom-card-8vh">
+                <div class="row">
+                    <div class="col">
+                        <label for="">血量</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" id="hp_bar">
+                            </div>
+                            <span id="hp_text">0/100</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">魔力</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" id="mage_bar">
+                            </div>
+                            <span id="mage_text">0/100</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">經驗</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" id="exp_bar">
+                            </div>
+                            <span id="exp_text">0/100</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <p>等級:<span id="lvl">1</span></p>
+                    </div>
+                    <div class="col-auto">
+                        <p>攻擊力:<span id="atk">1</span></p>
+                    </div>
+                    <div class="col-auto">
+                        <p>防禦力:<span id="def">1</span></p>
+                    </div>
+                    <div class="col-auto">
+                        <p>金錢:<span id="coin">0</span></p>
+                    </div>
+                    <div class="col-auto">
+                        <p>速度:<span id="speed">3</span></p>
+                    </div>
+                </div>
+
+                <iframe src="" id="gameFrame" class="flex-fill"></iframe>
+
+
+
+
+                <div id="inventoryOverlay">
+                    <div>
+                        <button id="closeInventory" class="btn btn-sm btn-secondary">X</button>
+
+                        <div id="equipmentPanel">
+                            <div id="weaponSlot">
+                            </div>
+                            <div id="armorSlot">
+                            </div>
+                        </div>
+
+                        <table id="inventoryTable" class="table">
+                            <tr>
+                                <th>物品</th>
+                                <th>數量</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="tooltip"></div>
+        <div id="citySkillOverlay">
+            <div class="row">
+                <div class="col">
+                    <h3 class="text-center">技能管理</h3>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-secondary" id="closeCitySkillBtn">關閉</button>
+                </div>
+            </div>
+            <div id="citySkillLayout">
+                <div id="citySkillLeft">
+                    <h4>目前戰鬥技能欄</h4>
+                    <div id="battleSkillList"></div>
+                </div>
+                <div id="citySkillRight">
+                    <h4>可設定技能</h4>
+                    <div id="citySkillList"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="battleSkillBar">
+        </div>
+    </div>
+   
+
+
+</body>
+
+</html>
