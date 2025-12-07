@@ -351,27 +351,7 @@ function generateEnemy(monsterName) {
     return selectedEnemy;
 }
 
-// function generateEnemy() {
-//     const enemies = [
-//         { name: "史萊姆", img: "../img/史萊姆.png", maxHP: 30, currentHP: 30, atk: 5, def: 0, rewardExp: 40, rewardCoin: [50, 100], drops: ["藥水", "鐵劍", "矛", "盾牌", "冰凍術", "再生術", "灼燒術"], lvl: [1, 10] },
-//         { name: "哥布林", img: "../img/哥布林.png", maxHP: 400, currentHP: 60, atk: 30, def: 20, rewardExp: 200, rewardCoin: [200, 300], drops: ["斧刀", "鎖子甲", "中型回血藥水", "中型魔力藥水"], lvl: [5, 20] },
-//         { name: "骷髏兵", img: "../img/骷髏頭.png", maxHP: 1500, currentHP: 200, atk: 100, def: 50, rewardExp: 1000, rewardCoin: [600, 800], drops: ["大寶劍","厚實的鎧甲","怒擊","大型回血藥水","大型魔力藥水","石化術"], lvl: [10, 30] },
-//         // { name: "野蠻人", img: "../img/小丑1.png", maxHP: 6000, currentHP: 200, atk: 300, def: 100, rewardExp: 3000, rewardCoin: [1000, 1200], drops: ["神劍","最堅強的護盾"], lvl: [30, 50] }
-//     ];
 
-//     const enemy = { ...enemies[Math.floor(Math.random() * enemies.length)] };
-//     const [minLvl, maxLvl] = enemy.lvl;
-//     const lvl = Math.floor(Math.random() * (maxLvl - minLvl + 1)) + minLvl;
-
-//     enemy.maxHP += (lvl - 1) * 4;
-//     enemy.currentHP = enemy.maxHP;
-//     enemy.atk += (lvl - 1) * 4;
-//     enemy.def += (lvl - 1) * 2;
-//     enemy.rewardExp += (lvl - 1) * 4;
-//     enemy.lvl = lvl;
-
-//     return enemy;
-// }
 
 const skillDatabase = {
     火球術: { name: "火球術", shop: true, rate: 30, price: 500, mpCost: 50, power: 30, desc: "對敵人造成自身攻擊力100%+30點火焰傷害並造成燃燒", type: "attack", effect: { target: "enemy", status: [{ type: "burn", value: 5, duration: 3, name: "燃燒" }] } },
