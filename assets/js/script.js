@@ -3038,3 +3038,10 @@ loadPlayer();
 loadMap()
 loadBattleSkillBar();
 // player.addItem({name:"鐵劍"})
+document.body.addEventListener("click", function () {
+    const iframe = document.getElementById('gameFrame');
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    const c = doc.getElementById('gameCanvas');
+    if (!c) return
+    iframe.focus()
+});
